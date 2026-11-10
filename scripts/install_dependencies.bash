@@ -33,7 +33,6 @@ if [ "$RUNNER_OS" = "Linux" ]; then
 
   curl -fsSLo- https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc >/dev/null
   sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-bullseye-prod bullseye main" > /etc/apt/sources.list.d/microsoft.list'
-  sudo add-apt-repository -y ppa:fish-shell/release-3
   sudo apt-get update
   sudo apt-get --allow-downgrades -y install curl parallel \
     fish powershell="${powershell_apt_semver}"
